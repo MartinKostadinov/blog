@@ -1,0 +1,55 @@
+//All  page btns styles
+@import 'mixins';
+//Menu  button styles//
+.btn__menu {
+    width: 2em;
+    height: 4.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    cursor: pointer;
+    @include medium-screen {
+        display: none;
+    }
+
+    &:hover {
+        .btn__menu__dashes:after,
+        .btn__menu__dashes:before {
+            width: 1em;
+        }
+    }
+}
+
+.btn__menu__dashes,
+.btn__menu__dashes:after,
+.btn__menu__dashes:before {
+    content: '';
+    height: 0.12em;
+    width: 1.8em;
+    position: absolute;
+    background-color: $white-color;
+    transition: all ease-in-out 400ms;
+}
+
+.btn__menu__dashes:after {
+    top: 0.4em;
+    right: 0;
+}
+
+.btn__menu__dashes:before {
+    bottom: 0.4em;
+}
+//Menu  button styles\\
+//Aside menu Search btn
+.btn__search {
+    width: 10%;
+    position: absolute;
+    height: 1.85em;
+    border: 1px solid $borderC;
+    border-left: 0;
+    background-image: url("../../assets/img/icons/search.svg");
+    background-repeat: no-repeat;
+    background-color: inherit;
+    cursor: pointer;
+}

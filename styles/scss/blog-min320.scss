@@ -1,0 +1,64 @@
+@import "_reset";
+@import '_colors';
+@import '_header';
+@import '_posts';
+@import '_aside';
+@import '_singlePost';
+@import '_btns';
+@import '_mixins';
+@mixin sWidth {
+    width: 109%;
+}
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+//General Styles
+body,
+html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: $bgC;
+}
+
+main {
+    min-height: calc(100vh - 180px);
+    padding-top: 60px;
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    padding: 1em;
+    overflow: hidden;
+    color: $white-color;
+    @include medium-screen {
+        width: 90%;
+        display: flex;
+        margin: 0 auto;
+        padding: 0 0 20px;
+        overflow: visible;
+    }
+    @include large-screen {
+        width: 70%;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: $white-color;
+}
+
+.clearFix:after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+    zoom: 1;
+}

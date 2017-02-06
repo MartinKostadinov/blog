@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="blogModule">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="styles/css/blog-min320.css" media="screen and (min-width: 0px) ">
+	<title>Martin'Blog</title>
+	<base href="/">
+</head>
+
+<body ng-controller="postsController" ng-cloack>
+	<header class="clearFix" id="header">
+		<h1><a href="#/" class="logo"><span class="logo__colored">Martin's</span><span>blog</span></a></h1>
+		<div class="btn__menu" title="Menu" role="button" ng-cLick="menu()" tabindex="1">
+			<div class="btn__menu__dashes"></div>
+		</div>
+		<nav class="nav" hide-menu-when-clicked-outside>
+			<!--ng-show="showMenu"-->
+			<header>
+				<h2>Navigation menu</h2>
+			</header>
+			<ul class="nav__list">
+				<li class="nav__items"><a href="#/create-post" class="nav__anchor">Create new post</a></li>
+				<li class="nav__items"><a href="#/" class="nav__anchor">Home page</a></li>
+				<li class="nav__items"><a href="https://martinkostadinov.github.io/" class="nav__anchor">Main site</a></li>
+				<li class="nav__items"><a href="" class="nav__anchor">Profile</a></li>
+			</ul>
+		</nav>
+	</header>
+	<!--main section-->
+	<main ng-view>
+
+	</main>
+	<!--AngularJs is licensed under MIT license - https://github.com/angular/angular.js/blob/master/LICENSE -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-aria.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+	<scritp src="assets/js/main.js"></scritp>
+	<script src="app/app.route.js"></script>
+	<script src="app/components/home/posts/postsController.js"></script>
+	<script src="app/components/home/services/getPostsService.js"></script>
+	<script src="app/components/home/singlePost/singlePostController.js"></script>
+	<script src="app/components/sidebar/sidebarDirective.js"></script>
+	<script src="app/components/home/directives/mobileMenuDirective.js"></script>
+</body>
+
+</html>

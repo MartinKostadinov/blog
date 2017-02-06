@@ -1,0 +1,30 @@
+<section>
+	<article class="post clearFix" ng-repeat="post in vm.blogPosts | orderBy :'-date' |filter: Search">
+		<header>
+			<time class="post__date" datetime="{{ post.date | date:'yyyy-MM-dd '}}">
+			{{ post.date | date:"EEEE, MMMM d, y"}}
+
+		</time>
+
+			<h2 class="post__title">{{post.title}}</h2>
+			<p class="author">
+				{{ post.author | uppercase }}
+			</p>
+		</header>
+		<figure class="post__img-cont">
+			<img class="post__img" ng-src={{post.image}} alt="{{post.title + 'image'}}" />
+		</figure>
+		<p class="text">{{post.text}}</p>
+		<div class="post__like-cont">
+			<a ng-click="vm.increaseLikes(post)" class="post__like-anchor"><img src="assets/img/icons/star.svg" alt="Star"></a>
+			<div class="post__likes-val">
+				{{post.likes}}
+			</div>
+		</div>
+		<a href="#/post/{{post.id}}" class="read-more">
+			Read more
+		</a>
+	</article>
+</section>
+<!--directive for aside menu with search-->
+<search-posts/>

@@ -1,0 +1,25 @@
+<section>
+	<article ng-controller="singlePostController" class="post post--single clearFix">
+		<header>
+			<time class="post__date" datetime="{{ vm.blogPost.date | date:" dd MMM. "}}">
+			{{ vm.blogPost.date | date:"dd MMM. "}}
+
+		</time>
+			<h2 class="post__title">{{ vm.blogPost.title }}</h2>
+			<p class="author ">
+				{{ vm.blogPost.author | uppercase }}
+			</p>
+		</header>
+		<figure class="post__img-cont">
+			<img class="post__img" ng-src={{vm.blogPost.image}} alt="{{vm.blogPost.title + 'image'}} " />
+		</figure>
+		<p class="text single-post--post">{{vm.blogPost.text}}</p>
+		<div class="post__like-cont">
+			<a ng-click="vm.increaseLikes(vm.blogPost)" class="post__like-anchor"><img src="assets/img/icons/star.svg" alt="Star"></a>
+			<div class="post__likes-val">
+				{{vm.blogPost.likes}}
+			</div>
+		</div>
+	</article>
+
+</section>

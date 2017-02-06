@@ -1,0 +1,23 @@
+@import 'mixins'; //Single post template styles, most of them are same as posts template
+//Single post
+
+.post--single {
+    @include medium-screen {
+        width: 70%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+//back to home button//
+
+.single-post__backToHome {
+    width: 100px;
+    display: block;
+    padding: 10px;
+    margin: 20px auto 0;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff6e40;
+}
+//back to home button\\
