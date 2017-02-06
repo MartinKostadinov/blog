@@ -2,6 +2,8 @@
 
 This is my project for personal Blog.
 
+![blog-home-picture](https://github.com/MartinKostadinov/MartinKostadinov.github.io/blob/master/images/blog1.jpg)
+
 Key features:
 * SPA with Angularjs
 * Hosted on Google Firebase
