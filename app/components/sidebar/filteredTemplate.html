@@ -1,5 +1,5 @@
 <section>
-	<article class="post clearFix" ng-repeat="post in vm.blogPosts track by $index ">
+	<article  class="post clearFix" ng-repeat="post in vm.filteredPosts">
 		<header>
 			<time class="post__date" datetime="{{ post.date | date:'yyyy-MM-dd '}}">
 			{{ post.date | date:"EEEE, MMMM d, y"}}
@@ -25,7 +25,4 @@
 			Read more
 		</a>
 	</article>
-	<buttton ng-click="vm.loadMore()">Load more posts</buttton>
 </section>
-<!--directive for aside menu with search-->
-<search-posts/>

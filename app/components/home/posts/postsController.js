@@ -21,6 +21,16 @@
         vm.increaseLikes = function(findPost) {
             getPostsService.likes(findPost, 'posts');
         };
+
+        vm.loadMore = function () {   
+                var start = vm.blogPosts[0].id -3;
+                var end  = vm.blogPosts[0].id -1; 
+                vm.test2 = getPostsService.loadMore(start, end).$loaded().then(function(response){       
+                     var updateVmBlogposts = vm.blogPosts.concat(response);
+                     vm.blogPosts = updateVmBlogposts;
+                });
+        
+        };
     }
 
 }());

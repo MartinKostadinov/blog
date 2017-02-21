@@ -4,7 +4,11 @@
         return {
             restrict: 'EA',
             templateUrl: 'app/components/sidebar/sidebarView.html',
-            replace: true
+            replace: true,
+            controller: 'SideBarController',
+            controllerAs: 'vm',
+            scope: true,
+            bindToController: true
         };
     });
 }());

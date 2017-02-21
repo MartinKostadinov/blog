@@ -8,14 +8,14 @@
                 ngShow: '='
             },
             link: function name(scope, element, attrs) {
-                var window = angular.element($window),
-                    parent = element.parent();
-                window.bind('click', function(e) {
-                    if (!parent[0].contains(e.target)) {
-                        scope.ngShow = false;
-                        scope.$apply();
-                    }
-                });
+                // var window = angular.element($window),
+                //     parent = element.parent();
+                // window.bind('click', function(e) {
+                //     if (!parent[0].contains(e.target)) {
+                //         scope.ngShow = false;
+                //         scope.$apply();
+                //     }
+                // });
             }
         };
     }

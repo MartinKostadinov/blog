@@ -1,14 +1,14 @@
 <aside class="col-1">
 	<div class="search">
 		<h3 class="search__title">Search Articles</h3>
-		<input class="search__input" type="text" name="name" ng-model="Search.title" placeholder=" Search">
-		<button class="btn__search" type="button" name="button"></button>
+		<input class="search__input" type="text" name="name" ng-model="searchData" placeholder=" Search">
+		<button class="btn__search"  name="button" ng-click="vm.searchPost(searchData)"></button>
 	</div>
 	<ul class="popular">
-		<h3 class="search__title"><a href="#">Popular</a></h3>
-		<li class="popular__items" ng-repeat="post in vm.blogPosts | orderBy: '-likes' | limitTo: 3">
+		<h3 class="search__title">Most Liked:</h3>
+		<li class="popular__items" ng-repeat="post in vm.mostLiked | orderBy: '-likes' | limitTo: 3">
 			<div class="popular__articles">
-				<h4 class="popular__articles-title"><a href="#">{{post.title}}</a></h4>
+				<h4 class="popular__articles-title"><a href="#/post/{{post.id}}">{{post.title}}</a></h4>
 				<img class="popular__articles-img" src="{{post.image}}" alt="" />
 			</div>
 		</li>
