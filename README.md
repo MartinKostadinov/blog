@@ -20,4 +20,8 @@ Visual design is ready;
 
 Created Single Post  and  Home page modules;
 
-(2.6.2017) It works  well with Firebase on local development, which means soon the current version  will go live;
+Added Search option  by keywords
+
+Added "Load More posts"option
+
+(19.4.2017) The first beta is live at https://martink-blog.firebaseapp.com/#/;
