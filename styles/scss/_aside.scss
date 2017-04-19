@@ -15,7 +15,7 @@ aside {
 
 .search {
     height: 5em;
-    width: 100%;
+    width:  100%;
     box-sizing: border-box;
     padding: 0 0.5em;
     position: relative;
@@ -23,13 +23,13 @@ aside {
 //Search title
 .search__title {
     margin-bottom: 0.5em;
-    font-size: 1.1rem;
+    font-size:   1.1rem;
     font-weight: lighter;
 }
 //Search input
 
 .search__input {
-    width: 89.3%;
+    width:  89.3%;
     height: 1.7em;
     border: 1px solid $borderC;
     border-right: none;
@@ -52,7 +52,7 @@ aside {
 
 .popular__articles {
     height: 6em;
-    width: 100%;
+    width:  100%;
     padding: 0.5em 0;
     text-align: center;
     overflow: hidden;

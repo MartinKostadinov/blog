@@ -1,5 +1,13 @@
 @import 'mixins';
-
+/*------------------------------------*\
+     #POST STYLES
+\*------------------------------------*//**
+* This file contains all general post styles
+*
+*1) Only few styles  are different  from  sinlge post  section
+*2) comment
+*
+*/
 section {
     flex: 2 100%;
     position: relative;
@@ -12,10 +20,10 @@ section {
 .post {
     box-sizing: border-box;
     display: block;
-    margin: 1em auto 0;
+    margin:  1em auto 0;
     padding: 0.5em;
-    border-left: 1px solid $borderC;
-    border-right: 1px solid $borderC;
+    border-left:   1px solid $borderC;
+    border-right:  1px solid $borderC;
     border-bottom: 1px solid $borderC;
     @include medium-screen {
         width: 48%;
@@ -49,7 +57,7 @@ section {
     color: $orange;
 }
 //////////////////////////////
-//Image container
+//Post Image container
 
 .post__img-cont {
     margin: 1em 0;
@@ -59,16 +67,16 @@ section {
 
 .post__img {
     max-width: 100%;
-    height: auto;
+    height:    auto;
     display: block;
 }
 //////////////////////////////
 //post text
 
 .text {
-    width: 100%;
+    width:  100%;
     height: 8em;
-    margin-bottom: 2em;
+    margin-bottom:  2em;
     padding-bottom: 0.5em;
     text-align: justify;
     word-wrap: break-word;
@@ -81,12 +89,12 @@ section {
     width: 5em;
     display: flex;
     float: left;
-    text-align: center;
+    text-align:  center;
     align-items: inherit;
 }
 
 .post__likes-val {
-    width: 1.5em;
+    width:  1.5em;
     height: 1.5em;
     display: inline-block;
     line-height: 1.7;
@@ -94,7 +102,7 @@ section {
 
 .post__like-anchor {
     height: 1.5em;
-    width: 1.5em;
+    width:  1.5em;
     display: inline-block;
     cursor: pointer;
     user-select: none;
@@ -109,40 +117,10 @@ section {
     color: $orange;
     cursor: pointer;
 }
-//////////////////////////////
-.blog-post {
-    padding: 10px 10px 0;
-
-    label,
-    textarea {
-        width: 100%;
-        display: inline-block;
-        margin-top: 10px;
-    }
-
-    button {
-        margin: 0 -10px;
-        border: none;
-        outline: none;
-        font-size: 1rem;
-        cursor: pointer;
-    }
-
-    .btn-submit {
-        background-color: $orange;
-        float: right;
-    }
-
-    .btn-cancel {
-        display: inline-block;
-        margin-left: -10px;
-        background-color: #c80a22;
-    }
-}
 
 .btn {
     height: 31px;
-    width: 30%;
+    width:  30%;
     line-height: 1.7;
     text-align: center;
     color: #fff;

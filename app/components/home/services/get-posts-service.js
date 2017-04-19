@@ -3,21 +3,21 @@
 
     angular
         .module('blogModule')
-        .factory('getPostsService', ['$firebaseArray', '$firebaseObject','$q', postsService]);
+        .factory('getPostsService', getPostsService);
 
-/**
- * FIREBASE CONFIG
- */
+    var config = {
+        //ANGULAR FIRE CONFIG HERE
+    };
     firebase.initializeApp(config);
-
-    function postsService($firebaseArray, $firebaseObject, $q) {
+    
+    getPostsService.inject = ['$firebaseArray', '$firebaseObject'];
+    function getPostsService($firebaseArray, $firebaseObject) {
         var service = {
             getPosts: getPosts,
             getSinglePost: getSinglePost,
             likes: likes,
             loadMore : loadMore
         };
-        var postsLenght;
 
         return service;
 
@@ -25,16 +25,14 @@
         function loadMore (start, end) {
             var ref = firebase.database().ref();
             var query = ref.child('posts').orderByChild('id').startAt(start).endAt(end);
-            var defered = $q.defer();
             var more = $firebaseArray(query);
-            // defered.resolve(more);
-            // console.log(more);
             return more;
         }
-        function getPosts(post) {
+        function getPosts() {
             var ref = firebase.database().ref();
-            var query =ref.child(post).limitToLast(2);//download  the 5 most recent posts
+            var query =ref.child('posts').limitToLast(2);//download  the  most recent posts
             var posts = $firebaseArray(query);
+    
             return posts;
         }
 

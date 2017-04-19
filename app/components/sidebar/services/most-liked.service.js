@@ -3,9 +3,10 @@
 
     angular
         .module('blogModule')
-        .factory('sidebarService',['$firebaseArray', '$firebaseObject','$q', sidebarService]);
-
-    function sidebarService($firebaseArray,$firebaseObject, $q) {
+        .factory('sidebarService', sidebarService);
+        
+    sidebarService.inject = ['$firebaseArray', '$firebaseObject'];
+    function sidebarService($firebaseArray,$firebaseObject) {
         var service ={
             mostLikedPosts : mostLikedPosts,
             addSearchData : addSearchData,
@@ -14,8 +15,6 @@
         };
 
         var searchData = [];
-        
-        ////////////////
         //get the 3 post with most likes
         function mostLikedPosts(posts) { 
             var ref = firebase.database().ref();

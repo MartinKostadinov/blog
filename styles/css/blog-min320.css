@@ -112,11 +112,11 @@ video {
 
 @media screen and (min-width: 801px) {
   .nav__list {
+    height: 100%;
     -webkit-box-flex: 1;
     -webkit-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    height: 100%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -173,6 +173,15 @@ video {
     .nav__anchor:hover:after {
       display: none; } }
 
+/*------------------------------------*     #POST STYLES
+\*------------------------------------*/
+/**
+* This file contains all general post styles
+*
+*1) Only few styles  are different  from  sinlge post  section
+*2) comment
+*
+*/
 section {
   -webkit-box-flex: 2;
   -webkit-flex: 2 100%;
@@ -272,27 +281,6 @@ section {
   line-height: 1.7;
   color: #fb9931;
   cursor: pointer; }
-
-.blog-post {
-  padding: 10px 10px 0; }
-  .blog-post label,
-  .blog-post textarea {
-    width: 100%;
-    display: inline-block;
-    margin-top: 10px; }
-  .blog-post button {
-    margin: 0 -10px;
-    border: none;
-    outline: none;
-    font-size: 1rem;
-    cursor: pointer; }
-  .blog-post .btn-submit {
-    background-color: #fb9931;
-    float: right; }
-  .blog-post .btn-cancel {
-    display: inline-block;
-    margin-left: -10px;
-    background-color: #c80a22; }
 
 .btn {
   height: 31px;
@@ -428,6 +416,18 @@ aside {
   background-repeat: no-repeat;
   background-color: inherit;
   cursor: pointer; }
+
+.btn__load-more {
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-decoration: underline; }
+  .btn__load-more:hover {
+    color: #fb9931; }
 
 body,
 html {

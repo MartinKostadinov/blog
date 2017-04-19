@@ -1,12 +1,11 @@
-<section>
-	<article  class="post clearFix" ng-repeat="post in vm.filteredPosts">
+<!--<section>-->
+	<article class="post clearFix" ng-repeat="post in vm.blogPosts | orderBy:'-date' ">
 		<header>
 			<time class="post__date" datetime="{{ post.date | date:'yyyy-MM-dd '}}">
 			{{ post.date | date:"EEEE, MMMM d, y"}}
 
 		</time>
-
-			<h2 class="post__title">{{post.title}}</h2>
+			<h2 class="post__title"><a href="#/post/{{post.id}}">{{post.title}}</a></h2>
 			<p class="author">
 				{{ post.author | uppercase }}
 			</p>
@@ -25,4 +24,5 @@
 			Read more
 		</a>
 	</article>
-</section>
+
+<!--</section>-->

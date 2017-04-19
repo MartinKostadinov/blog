@@ -2,7 +2,7 @@
 
 #header {
     height: 4.5em;
-    width: 100%;
+    width:  100%;
     padding: 0 0.5em;
     position: relative;
     box-sizing: border-box;
@@ -15,6 +15,7 @@
     h1 {
         height: inherit;
         float: left;
+
         @include medium-screen {
             margin-left: 4%;
         }
@@ -29,10 +30,10 @@
 .logo {
     display: flex;
     height: 100%;
-    width: 100%;
+    width:  100%;
     align-items: center;
     font-weight: 100;
-    font-size: 1.1rem;
+    font-size:   1.1rem;
 }
 
 .logo__colored {
@@ -48,11 +49,12 @@
     position: absolute;
     text-align: center;
     background-color: $bgC;
-    border-top: 2px solid $borderC;
+    border-top:    2px solid $borderC;
     border-bottom: 2px solid $borderC;
     z-index: 999;
+
     @include medium-screen {
-        width: 21em;
+        width:  21em;
         height: 100%;
         display: block;
         float: right;
@@ -73,7 +75,7 @@
         padding: 0 !important;
         border: 0 !important;
         height: 1px !important;
-        width: 1px !important;
+        width:  1px !important;
         overflow: hidden;
         white-space: nowrap;
     }
@@ -81,10 +83,10 @@
 
 .nav__list {
     @include medium-screen {
-        flex: 1;
         height: 100%;
+        flex: 1;
         display: flex;
-        align-items: center;
+        align-items:     center;
         justify-content: flex-end;
     }
 }
@@ -102,6 +104,7 @@
     height: 100%;
     display: block;
     font-size: 0.9em;
+
     @include medium-screen {
         color: $anchors;
     }
@@ -128,7 +131,7 @@
     &:after {
         content: '';
         display: block;
-        width: 5em;
+        width:  5em;
         height: 0.11em;
         background-color: $borderC;
         @include medium-screen {

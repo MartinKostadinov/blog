@@ -5,8 +5,8 @@
         .module('blogModule')
         .factory('filteredPosts', filteredPosts);
 
-    filteredPosts.inject = ['$firebaseArray', '$firebaseObject','$q'];
-    function filteredPosts($firebaseArray,$firebaseObject, $q) {
+    filteredPosts.inject = ['$firebaseArray', '$firebaseObject'];
+    function filteredPosts($firebaseArray,$firebaseObject) {
         var service = {
             filterByKeyword : filterByKeyword,
             filterPostsById : filterPostsById
@@ -24,7 +24,7 @@
             var filteredPosts = [];
                angular.forEach(postsArray, function(id){
                     var query = ref.child('posts').child(id);
-                         var postObj = $firebaseObject(query);
+                    var postObj = $firebaseObject(query);
                                     filteredPosts.push(postObj );
                     });              
             return filteredPosts;
